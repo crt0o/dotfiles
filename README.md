@@ -1,10 +1,10 @@
 # Dotfiles
-![A screenshot of the desktop](https://i.imgur.com/H190Ihu.png)
+![A screenshot of the desktop](https://i.redd.it/nhptzj65i4x81.png)
 These are the dotfiles for my current rice, this time using `bspwm`. I decided not to include a bar, since I found I didn't really need it and it was just taking up precious screen real-estate. I haven't really gotten to setting up a GTK theme, since it's a lot of work. I might do it in the future tho.
 ## Info
 - **WM** -> `bspwm`
 - **Walpaper setter** -> `feh`
-- **Wallpaper** -> From (this)[https://www.reddit.com/r/EarthPorn/comments/tooxia/dolomites_natural_park_oc_andrealivieriphoto] reddit post, author is @andrealivieriphoto on Instagram
+- **Wallpaper** -> From [this](https://www.reddit.com/r/EarthPorn/comments/tooxia/dolomites_natural_park_oc_andrealivieriphoto) reddit post, author is @andrealivieriphoto on Instagram
 - **Terminal** -> `kitty`
 - **Shell** -> `bash`
 - **Compositor** -> `picom-jonaburg-git` (`aur`)
