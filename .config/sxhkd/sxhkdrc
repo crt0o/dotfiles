@@ -1,0 +1,84 @@
+# --- Programs ---
+
+# Terminal
+super + Return
+	kitty
+
+# Program launcher
+super + {@space, r}
+	rofi -show drun
+
+# Screen locker
+super + Escape
+	slock
+
+# Screenshot
+super + shift + s
+	scrot
+	
+# --- Volume control ---
+
+XF86AudioRaiseVolume
+	amixer sset 'Master' 3%+
+
+XF86AudioLowerVolume
+	amixer sset 'Master' 3%-
+
+XF86AudioMute
+	amixer -D pulse set 'Master' 1+ toggle
+
+# --- Bspwm ---
+
+# -- System --
+
+# Quit
+super + shift + q
+	bspc quit
+
+# Restart
+super + shift + r
+	bspc wm -r && pkill -USR1 -x sxhkd
+
+# -- Layouts --
+
+# Tiled / Monocle
+super + m
+	bspc desktop -l next
+
+# -- Window controls --
+
+# Kill 
+super + w
+	bspc node -c
+
+# Tiled / Floating / Fullscreen
+super + {t, s, f}
+	bspc node -t {tiled,floating,fullscreen}
+
+# Focus
+super + {Left, Down, Up, Right}
+	bspc node -f {west, south, north, east}
+
+# Swap
+super + shift + {Left, Down, Up, Right}
+	bspc node -s {west, south, north, east}
+
+# Expand
+super + ctrl + {Left, Down, Up, Right}
+	bspc node -z {left -20 0, bottom 0 20, top 0 -20, right 20 0}
+
+# Contract
+super + ctrl + shift + {Left, Down, Up, Right}
+	bspc node -z {right -20 0, top 0 20, bottom 0 -20, left 20 0}
+
+# -- Desktops --
+
+# Move
+super + {1-9,0}
+    d='{1-9,10}'; \
+    bspc desktop -f "$d.local" || bspc desktop -s "$d"
+
+# Move window
+super + shift + {1-9,0}
+	d='{1-9,10}'; \
+	bspc node -d "$d"

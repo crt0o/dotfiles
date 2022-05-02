@@ -1,0 +1,20 @@
+# crt0o's micro colorscheme
+
+# Default
+color-link default "black, #fbe9e0"
+
+# Syntax
+color-link comment "green"
+color-link identifier "blue"
+color-link constant "cyan"
+color-link constant.string "yellow"
+color-link special "red"
+color-link symbol.operator "red"
+color-link type "magenta"
+color-link statement "red"
+color-link preproc "magenta"
+
+# Diff-edit
+color-link diff-added "green"
+color-link diff-modified "yellow"
+color-link diff-deleted "red"
